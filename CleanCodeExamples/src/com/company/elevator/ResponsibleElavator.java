@@ -26,15 +26,17 @@ public class ResponsibleElavator implements Elevator {
 
         } else {
             System.out.println("The elevator has exceeded capacity, doors will remain open until someone exits!");
-       closeDoor();
+            closeDoor();
         }
     }
 
 
     @Override
     public void go(Floor desiredFloor) {
-        int compare = currentFloor.compareTo(desiredFloor);
 
+        desiredFloor = Floor.refactorDesiredFloor(desiredFloor);
+
+        int compare = currentFloor.compareTo(desiredFloor);
         while (compare != 0) {
             if (compare < 0) {
                 goUp();
@@ -47,6 +49,7 @@ public class ResponsibleElavator implements Elevator {
         openDoor();
 
     }
+
 
     void calculateCapacity() {
         weight = (int) (Math.random() * 1500);
