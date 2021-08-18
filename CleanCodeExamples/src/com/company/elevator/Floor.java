@@ -1,4 +1,4 @@
-package com.company.elevator;
+package com.company.Elevator;
 
 public enum Floor {
             MIN(-7), MINUS_7(-7),MINUS_6(-6),MINUS_5(-5),MINUS_4(-4), MINUS_3(-3), MINUS_2(-2), MINUS_1(-1), ENTRANCE(0), FIRST(1), SECOND(2), THIRD(3), FOURTH(4), FIFTH(5), MAX(5);
